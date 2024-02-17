@@ -8,7 +8,7 @@ WORKDIR /app
 ARG JAR_TARGET=target
 
 # Copy the JAR file into the container at /app
-ADD ${JAR_TARGET}/jenkins-cicd.jar /app/jenkins-cicd.jar
+ADD ${JAR_TARGET}/jenkins-cicd-0.0.1.jar /app/jenkins-cicd.jar
 
 # Expose the port that the application will run on
 EXPOSE 8081
