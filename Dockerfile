@@ -2,16 +2,16 @@
 FROM openjdk:21
 
 # Set the working directory inside the container
-WORKDIR /app
+#WORKDIR /app
+
+# Expose the port that the application will run on
+EXPOSE 8081
 
 # ARG to specify the build argument (default is 'target')
 ARG JAR_TARGET=target
 
 # Copy the JAR file into the container at /app
-ADD ${JAR_TARGET}/jenkins-cicd-0.0.1.jar /app/jenkins-cicd.jar
-
-# Expose the port that the application will run on
-EXPOSE 8081
+ADD ${JAR_TARGET}/jenkins-cicd-1.jar jenkins-cicd.jar
 
 # Specify the command to run on container start
 CMD ["java", "-jar", "jenkins-cicd.jar"]
