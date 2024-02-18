@@ -14,6 +14,6 @@ public class JenkinsCicdApplication {
     }
     @GetMapping
     public String welcomeNote(){
-        return "welcome on cicd";
+        return "welcome on updated cicd";
     }
 }
